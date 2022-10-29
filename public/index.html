@@ -1,53 +1,37 @@
-const Header = (props) => {
-    return (
-      [
-      <h1>
-        {props.course}
-      </h1>
-    ]
-    )
-  }
-  
-  const Content = (props) => {
-    return (
-      [
-        <p>
-        {props.part} {props.exercise}
-        </p>
-      ]
-    )
-  }
-  
-  const Total = (props) => {
-    return (
-      [
-        <p> Number of exercises {props.total}</p>
-      ]
-    )
-  }
-  
-  
-  const App = () => {
-    const course = 'Half Stack application development'
-    const part1 = 'Fundamentals of React'
-    const exercises1 = 10
-    const part2 = 'Using props to pass data'
-    const exercises2 = 7
-    const part3 = 'State of a component'
-    const exercises3 = 14
-  
-    return (
-      <div>
-        <Header course = {course}/>
-  
-        <Content part = {part1} exercise = {exercises1}/>
-        <Content part = {part2} exercise = {exercises2}/>
-        <Content part = {part3} exercise = {exercises3}/>
-  
-        <Total total = {exercises1 + exercises2 + exercises3}/>
-        
-        </div>
-    )
-  }
-  
-  export default App
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="theme-color" content="#000000">
+    <!--
+      manifest.json provides metadata used when your web app is added to the
+      homescreen on Android. See https://developers.google.com/web/fundamentals/engage-and-retain/web-app-manifest/
+    -->
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json">
+    <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico">
+    <!--
+      Notice the use of %PUBLIC_URL% in the tags above.
+      It will be replaced with the URL of the `public` folder during the build.
+      Only files inside the `public` folder can be referenced from the HTML.
+      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
+      work correctly both with client-side routing and a non-root public URL.
+      Learn how to configure a non-root public URL by running `npm run build`.
+    -->
+    <title>React App</title>
+  </head>
+  <body>
+    <noscript>
+      You need to enable JavaScript to run this app.
+    </noscript>
+    <div id="root"></div>
+    <!--
+      This HTML file is a template.
+      If you open it directly in the browser, you will see an empty page.
+      You can add webfonts, meta tags, or analytics to this file.
+      The build step will place the bundled scripts into the <body> tag.
+      To begin the development, run `npm start` or `yarn start`.
+      To create a production bundle, use `npm run build` or `yarn build`.
+    -->
+  </body>
+</html>
